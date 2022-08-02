@@ -1,0 +1,95 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#121212, #212b46);
+}
+.imgTerra {
+    margin: 36px 0;
+    width: max(180px, 20vw);
+    animation: flipTerra 30s linear infinite;
+}
+.titulo {
+    font-size: max(22px, 4vw);;
+    color: #fff;
+    animation: escrever 5s 3s normal steps(55) both, pisca .8s infinite normal;
+    
+    border-right: 4px solid #fff;
+    padding-right: 3px;
+    max-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.containerInput {
+    background-color: rgb(255, 255, 255, 0.2);
+    min-width: 200px;
+    width: 30%;
+    padding: 10px;
+    margin-top: 34px;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 1px 3px 8px #fff;
+}
+.containerInput input {
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+    color: #fff;
+    outline: none;
+    margin-right: 8px;
+}
+.containerInput input::placeholder {
+    color: #f1f1f1;
+}
+.buttonPesquisa {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s;
+}
+.buttonPesquisa:hover {
+    transform: scale(1.5);
+}
+@keyframes escrever {
+    100% {
+        max-width: 100%;
+    }
+}
+@keyframes flipTerra {
+    from {
+        transform: rotate(0deg);
+    } 
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes pisca {
+    100% {
+        border-right-color: transparent;
+    }
+}
+.main {
+    box-shadow: 1px 3px 8px rgb(205, 182, 182);
+    width: 60%;
+    min-width: 300px;
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.main h2 {
+    margin: 20px 0;
+}
+.main span {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
